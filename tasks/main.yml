@@ -8,9 +8,3 @@
     src: sshd_config.j2
     dest: "{{ sshd_conf }}"
   notify: Restart sshd
-
-- name: Start sshd
-  service:
-    name: "{{ sshd_service }}"
-    enabled: true
-    state: started
